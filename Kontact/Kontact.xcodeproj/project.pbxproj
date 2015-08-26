@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2025C1971B8A3C01009189B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025C1961B8A3C01009189B8 /* AppDelegate.swift */; };
+		2025C1991B8A3C01009189B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025C1981B8A3C01009189B8 /* ViewController.swift */; };
+		2025C19C1B8A3C01009189B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2025C19A1B8A3C01009189B8 /* Main.storyboard */; };
+		2025C19E1B8A3C01009189B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2025C19D1B8A3C01009189B8 /* Assets.xcassets */; };
+		2025C1A11B8A3C01009189B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2025C19F1B8A3C01009189B8 /* LaunchScreen.storyboard */; };
+		2025C1B21B8BC483009189B8 /* KontactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025C1B11B8BC483009189B8 /* KontactEntity.swift */; };
+		2041B5381B8D61E200B0D656 /* KontactRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5371B8D61E200B0D656 /* KontactRelation.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B53A1B8D62FC00B0D656 /* KontactRelationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5391B8D62FC00B0D656 /* KontactRelationLabel.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B53C1B8E09E800B0D656 /* KontactSocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B53B1B8E09E800B0D656 /* KontactSocialProfile.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B53E1B8E0D7200B0D656 /* KontactSocialProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B53D1B8E0D7200B0D656 /* KontactSocialProfileService.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B55E1B8E57FF00B0D656 /* KontactDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B55D1B8E57FF00B0D656 /* KontactDate.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B5601B8E5D2000B0D656 /* KontactPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B55F1B8E5D2000B0D656 /* KontactPhoneNumber.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B5621B8E62A400B0D656 /* KontactURLAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5611B8E62A400B0D656 /* KontactURLAddress.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B5641B8E66A100B0D656 /* KontactPostalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5631B8E66A100B0D656 /* KontactPostalAddress.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B5661B8E6DE000B0D656 /* KontactEmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5651B8E6DE000B0D656 /* KontactEmailAddress.swift */; settings = {ASSET_TAGS = (); }; };
+		20E194CF1B8BEC8A00D1227D /* KontactType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E194CE1B8BEC8A00D1227D /* KontactType.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2025C1931B8A3C01009189B8 /* Kontact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kontact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2025C1961B8A3C01009189B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2025C1981B8A3C01009189B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2025C19B1B8A3C01009189B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2025C19D1B8A3C01009189B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2025C1A01B8A3C01009189B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2025C1A21B8A3C01009189B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2025C1AD1B8A3C97009189B8 /* Kontact-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kontact-Bridging-Header.h"; sourceTree = "<group>"; };
+		2025C1B11B8BC483009189B8 /* KontactEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactEntity.swift; sourceTree = "<group>"; };
+		2041B5371B8D61E200B0D656 /* KontactRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactRelation.swift; sourceTree = "<group>"; };
+		2041B5391B8D62FC00B0D656 /* KontactRelationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactRelationLabel.swift; sourceTree = "<group>"; };
+		2041B53B1B8E09E800B0D656 /* KontactSocialProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactSocialProfile.swift; sourceTree = "<group>"; };
+		2041B53D1B8E0D7200B0D656 /* KontactSocialProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactSocialProfileService.swift; sourceTree = "<group>"; };
+		2041B55D1B8E57FF00B0D656 /* KontactDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactDate.swift; sourceTree = "<group>"; };
+		2041B55F1B8E5D2000B0D656 /* KontactPhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactPhoneNumber.swift; sourceTree = "<group>"; };
+		2041B5611B8E62A400B0D656 /* KontactURLAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactURLAddress.swift; sourceTree = "<group>"; };
+		2041B5631B8E66A100B0D656 /* KontactPostalAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactPostalAddress.swift; sourceTree = "<group>"; };
+		2041B5651B8E6DE000B0D656 /* KontactEmailAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactEmailAddress.swift; sourceTree = "<group>"; };
+		20E194CE1B8BEC8A00D1227D /* KontactType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2025C1901B8A3C01009189B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2025C18A1B8A3C01009189B8 = {
+			isa = PBXGroup;
+			children = (
+				2025C1951B8A3C01009189B8 /* Kontact */,
+				2025C1941B8A3C01009189B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2025C1941B8A3C01009189B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2025C1931B8A3C01009189B8 /* Kontact.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2025C1951B8A3C01009189B8 /* Kontact */ = {
+			isa = PBXGroup;
+			children = (
+				2025C1961B8A3C01009189B8 /* AppDelegate.swift */,
+				2025C1981B8A3C01009189B8 /* ViewController.swift */,
+				2025C1AA1B8A3C1A009189B8 /* Kontact */,
+				2025C19A1B8A3C01009189B8 /* Main.storyboard */,
+				2025C19D1B8A3C01009189B8 /* Assets.xcassets */,
+				2025C19F1B8A3C01009189B8 /* LaunchScreen.storyboard */,
+				2025C1A21B8A3C01009189B8 /* Info.plist */,
+			);
+			path = Kontact;
+			sourceTree = "<group>";
+		};
+		2025C1AA1B8A3C1A009189B8 /* Kontact */ = {
+			isa = PBXGroup;
+			children = (
+				2025C1AD1B8A3C97009189B8 /* Kontact-Bridging-Header.h */,
+				2025C1B11B8BC483009189B8 /* KontactEntity.swift */,
+				20E194CE1B8BEC8A00D1227D /* KontactType.swift */,
+				2041B5371B8D61E200B0D656 /* KontactRelation.swift */,
+				2041B5391B8D62FC00B0D656 /* KontactRelationLabel.swift */,
+				2041B53B1B8E09E800B0D656 /* KontactSocialProfile.swift */,
+				2041B53D1B8E0D7200B0D656 /* KontactSocialProfileService.swift */,
+				2041B55D1B8E57FF00B0D656 /* KontactDate.swift */,
+				2041B55F1B8E5D2000B0D656 /* KontactPhoneNumber.swift */,
+				2041B5611B8E62A400B0D656 /* KontactURLAddress.swift */,
+				2041B5631B8E66A100B0D656 /* KontactPostalAddress.swift */,
+				2041B5651B8E6DE000B0D656 /* KontactEmailAddress.swift */,
+			);
+			name = Kontact;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2025C1921B8A3C01009189B8 /* Kontact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2025C1A51B8A3C01009189B8 /* Build configuration list for PBXNativeTarget "Kontact" */;
+			buildPhases = (
+				2025C18F1B8A3C01009189B8 /* Sources */,
+				2025C1901B8A3C01009189B8 /* Frameworks */,
+				2025C1911B8A3C01009189B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kontact;
+			productName = Kontact;
+			productReference = 2025C1931B8A3C01009189B8 /* Kontact.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2025C18B1B8A3C01009189B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Xappox, LLC";
+				TargetAttributes = {
+					2025C1921B8A3C01009189B8 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 2025C18E1B8A3C01009189B8 /* Build configuration list for PBXProject "Kontact" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2025C18A1B8A3C01009189B8;
+			productRefGroup = 2025C1941B8A3C01009189B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2025C1921B8A3C01009189B8 /* Kontact */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2025C1911B8A3C01009189B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2025C1A11B8A3C01009189B8 /* LaunchScreen.storyboard in Resources */,
+				2025C19E1B8A3C01009189B8 /* Assets.xcassets in Resources */,
+				2025C19C1B8A3C01009189B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2025C18F1B8A3C01009189B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2041B55E1B8E57FF00B0D656 /* KontactDate.swift in Sources */,
+				2025C1991B8A3C01009189B8 /* ViewController.swift in Sources */,
+				2041B5641B8E66A100B0D656 /* KontactPostalAddress.swift in Sources */,
+				2041B5601B8E5D2000B0D656 /* KontactPhoneNumber.swift in Sources */,
+				2025C1B21B8BC483009189B8 /* KontactEntity.swift in Sources */,
+				2041B5661B8E6DE000B0D656 /* KontactEmailAddress.swift in Sources */,
+				2041B53E1B8E0D7200B0D656 /* KontactSocialProfileService.swift in Sources */,
+				2041B53C1B8E09E800B0D656 /* KontactSocialProfile.swift in Sources */,
+				20E194CF1B8BEC8A00D1227D /* KontactType.swift in Sources */,
+				2041B5621B8E62A400B0D656 /* KontactURLAddress.swift in Sources */,
+				2025C1971B8A3C01009189B8 /* AppDelegate.swift in Sources */,
+				2041B5381B8D61E200B0D656 /* KontactRelation.swift in Sources */,
+				2041B53A1B8D62FC00B0D656 /* KontactRelationLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2025C19A1B8A3C01009189B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2025C19B1B8A3C01009189B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2025C19F1B8A3C01009189B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2025C1A01B8A3C01009189B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2025C1A31B8A3C01009189B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2025C1A41B8A3C01009189B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2025C1A61B8A3C01009189B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Kontact/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xappox.Kontact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kontact/Kontact-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2025C1A71B8A3C01009189B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Kontact/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xappox.Kontact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kontact/Kontact-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2025C18E1B8A3C01009189B8 /* Build configuration list for PBXProject "Kontact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2025C1A31B8A3C01009189B8 /* Debug */,
+				2025C1A41B8A3C01009189B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2025C1A51B8A3C01009189B8 /* Build configuration list for PBXNativeTarget "Kontact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2025C1A61B8A3C01009189B8 /* Debug */,
+				2025C1A71B8A3C01009189B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2025C18B1B8A3C01009189B8 /* Project object */;
+}
