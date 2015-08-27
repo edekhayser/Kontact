@@ -64,8 +64,11 @@ import AddressBook
 		self.contact = contact
 	}
 	
-	public func getIdentifier() -> String{
+	public func getIdentifier() throws -> String{
 		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+			if !contact.isKeyAvailable(CNContactIdentifierKey){
+				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactIdentifierKey])
+			}
 			return contact.identifier
 		} else {
 			return "\(ABRecordGetRecordID(record))"
