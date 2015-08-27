@@ -22,6 +22,7 @@
 		2041B5621B8E62A400B0D656 /* KontactURLAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5611B8E62A400B0D656 /* KontactURLAddress.swift */; settings = {ASSET_TAGS = (); }; };
 		2041B5641B8E66A100B0D656 /* KontactPostalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5631B8E66A100B0D656 /* KontactPostalAddress.swift */; settings = {ASSET_TAGS = (); }; };
 		2041B5661B8E6DE000B0D656 /* KontactEmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5651B8E6DE000B0D656 /* KontactEmailAddress.swift */; settings = {ASSET_TAGS = (); }; };
+		2041B5681B8E824600B0D656 /* KontactGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041B5671B8E824600B0D656 /* KontactGroup.swift */; settings = {ASSET_TAGS = (); }; };
 		20E194CF1B8BEC8A00D1227D /* KontactType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E194CE1B8BEC8A00D1227D /* KontactType.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		2041B5611B8E62A400B0D656 /* KontactURLAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactURLAddress.swift; sourceTree = "<group>"; };
 		2041B5631B8E66A100B0D656 /* KontactPostalAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactPostalAddress.swift; sourceTree = "<group>"; };
 		2041B5651B8E6DE000B0D656 /* KontactEmailAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactEmailAddress.swift; sourceTree = "<group>"; };
+		2041B5671B8E824600B0D656 /* KontactGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactGroup.swift; sourceTree = "<group>"; };
 		20E194CE1B8BEC8A00D1227D /* KontactType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontactType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 			children = (
 				2025C1AD1B8A3C97009189B8 /* Kontact-Bridging-Header.h */,
 				2025C1B11B8BC483009189B8 /* KontactEntity.swift */,
+				2041B5671B8E824600B0D656 /* KontactGroup.swift */,
 				20E194CE1B8BEC8A00D1227D /* KontactType.swift */,
 				2041B5371B8D61E200B0D656 /* KontactRelation.swift */,
 				2041B5391B8D62FC00B0D656 /* KontactRelationLabel.swift */,
@@ -186,6 +189,7 @@
 				2041B5661B8E6DE000B0D656 /* KontactEmailAddress.swift in Sources */,
 				2041B53E1B8E0D7200B0D656 /* KontactSocialProfileService.swift in Sources */,
 				2041B53C1B8E09E800B0D656 /* KontactSocialProfile.swift in Sources */,
+				2041B5681B8E824600B0D656 /* KontactGroup.swift in Sources */,
 				20E194CF1B8BEC8A00D1227D /* KontactType.swift in Sources */,
 				2041B5621B8E62A400B0D656 /* KontactURLAddress.swift in Sources */,
 				2025C1971B8A3C01009189B8 /* AppDelegate.swift in Sources */,

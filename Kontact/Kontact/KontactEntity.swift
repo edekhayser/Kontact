@@ -26,13 +26,13 @@ import AddressBook
 		}
 	}
 	
-	private var c: NSObject!
+	private var c: AnyObject!
 	@available (iOS 9, *)
 	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public var contact: CNContact!{
 		get{
-			return c as? CNContact
+			return c as! CNContact
 		}
 		set{
 			c = newValue
