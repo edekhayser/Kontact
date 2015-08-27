@@ -15,7 +15,6 @@ import AddressBook
 	
 	private var r: AnyObject!
 	@available (iOS, introduced=7.0, deprecated=9.0)
-	@available (OSX, introduced=10.9, deprecated=10.11)
 	@available (watchOS, unavailable)
 	public var record: ABRecordRef!{
 		get{
@@ -28,7 +27,6 @@ import AddressBook
 	
 	private var c: AnyObject!
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public var contact: CNContact!{
 		get{
@@ -41,7 +39,7 @@ import AddressBook
 	
 	public override init(){
 		super.init()
-		if #available(iOS 9.0, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			self.contact = CNContact()
 		} else {
 			self.record = ABPersonCreate().takeRetainedValue()
@@ -49,7 +47,6 @@ import AddressBook
 	}
 	
 	@available (iOS, introduced=7.0, deprecated=9.0)
-	@available (OSX, introduced=10.9, deprecated=10.11)
 	@available (watchOS, unavailable)
 	public init(record: ABRecordRef){
 		super.init()
@@ -57,7 +54,6 @@ import AddressBook
 	}
 	
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public init(contact: CNContact){
 		super.init()
@@ -65,7 +61,7 @@ import AddressBook
 	}
 	
 	public func getIdentifier() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactIdentifierKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactIdentifierKey])
 			}
@@ -76,7 +72,7 @@ import AddressBook
 	}
 	
 	public func getContactType() throws -> KontactType{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactTypeKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNamePrefixKey])
 			}
@@ -86,7 +82,6 @@ import AddressBook
 		}
 	}
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func setContactType(newValue: KontactType) throws{
 		if !contact.isKeyAvailable(CNContactTypeKey){
@@ -98,7 +93,7 @@ import AddressBook
 	}
 	
 	public func getBirthday() throws -> NSDateComponents?{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactBirthdayKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactBirthdayKey])
 			}
@@ -116,7 +111,6 @@ import AddressBook
 	}
 	
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func getNonGregorianBirthday() throws -> NSDateComponents?{
 		if !contact.isKeyAvailable(CNContactNonGregorianBirthdayKey){
@@ -125,7 +119,6 @@ import AddressBook
 		return contact.nonGregorianBirthday
 	}
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func setNonGregorianBirthday(newValue: NSDateComponents?) throws{
 		if !contact.isKeyAvailable(CNContactNonGregorianBirthdayKey){
@@ -137,7 +130,7 @@ import AddressBook
 	}
 	
 	public func getDates() throws -> [KontactDate] {
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactDatesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactDatesKey])
 			}
@@ -154,7 +147,7 @@ import AddressBook
 		}
 	}
 	public func setDates(newValue: [KontactDate]) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactDatesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactDatesKey])
 			}
@@ -174,7 +167,7 @@ import AddressBook
 	}
 	
 	public func getPrefix() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactNamePrefixKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNamePrefixKey])
 			}
@@ -184,7 +177,7 @@ import AddressBook
 		}
 	}
 	public func setPrefix(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactNamePrefixKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNamePrefixKey])
 			}
@@ -197,7 +190,7 @@ import AddressBook
 	}
 	
 	public func getFirstName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactGivenNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactGivenNameKey])
 			}
@@ -207,7 +200,7 @@ import AddressBook
 		}
 	}
 	public func setFirstName(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactGivenNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactGivenNameKey])
 			}
@@ -220,7 +213,7 @@ import AddressBook
 	}
 	
 	public func getMiddleName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactMiddleNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactMiddleNameKey])
 			}
@@ -230,7 +223,7 @@ import AddressBook
 		}
 	}
 	public func setMiddleName(newValue: String?) throws {
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactMiddleNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactMiddleNameKey])
 			}
@@ -243,7 +236,7 @@ import AddressBook
 	}
 	
 	public func getFamilyName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactFamilyNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactFamilyNameKey])
 			}
@@ -253,7 +246,7 @@ import AddressBook
 		}
 	}
 	public func setFamilyName(newValue: String?) throws {
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactFamilyNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactFamilyNameKey])
 			}
@@ -266,7 +259,6 @@ import AddressBook
 	}
 	
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func getPreviousFamilyName() throws -> String{
 		if !contact.isKeyAvailable(CNContactPreviousFamilyNameKey){
@@ -275,7 +267,6 @@ import AddressBook
 		return contact.previousFamilyName
 	}
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func setPreviousFamilyName(newValue: String?) throws{
 		if !contact.isKeyAvailable(CNContactPreviousFamilyNameKey){
@@ -287,7 +278,7 @@ import AddressBook
 	}
 	
 	public func getSuffix() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactNameSuffixKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNameSuffixKey])
 			}
@@ -297,7 +288,7 @@ import AddressBook
 		}
 	}
 	public func setSuffix(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactNameSuffixKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNameSuffixKey])
 			}
@@ -310,7 +301,7 @@ import AddressBook
 	}
 	
 	public func getPhoneticFirstName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneticGivenNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneticGivenNameKey])
 			}
@@ -320,7 +311,7 @@ import AddressBook
 		}
 	}
 	public func setPhoneticFirstName(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneticGivenNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneticGivenNameKey])
 			}
@@ -333,7 +324,7 @@ import AddressBook
 	}
 	
 	public func getPhoneticMiddleName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneticMiddleNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneticMiddleNameKey])
 			}
@@ -343,7 +334,7 @@ import AddressBook
 		}
 	}
 	public func setPhoneticMiddleName(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneticMiddleNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneticMiddleNameKey])
 			}
@@ -356,7 +347,7 @@ import AddressBook
 	}
 	
 	public func getPhoneticLastName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneticFamilyNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneticFamilyNameKey])
 			}
@@ -366,7 +357,7 @@ import AddressBook
 		}
 	}
 	public func setPhoneticLastName(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneticFamilyNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneticFamilyNameKey])
 			}
@@ -379,7 +370,7 @@ import AddressBook
 	}
 	
 	public func getOrganizationName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactOrganizationNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactOrganizationNameKey])
 			}
@@ -389,7 +380,7 @@ import AddressBook
 		}
 	}
 	public func setOrganizationName(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactOrganizationNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactOrganizationNameKey])
 			}
@@ -402,7 +393,7 @@ import AddressBook
 	}
 	
 	public func getDepartmentName() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactDepartmentNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactDepartmentNameKey])
 			}
@@ -412,7 +403,7 @@ import AddressBook
 		}
 	}
 	public func setDepartmentName(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactDepartmentNameKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactDepartmentNameKey])
 			}
@@ -425,7 +416,7 @@ import AddressBook
 	}
 	
 	public func getJobTitle() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactJobTitleKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactJobTitleKey])
 			}
@@ -435,7 +426,7 @@ import AddressBook
 		}
 	}
 	public func setJobTitle(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactJobTitleKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactJobTitleKey])
 			}
@@ -448,7 +439,7 @@ import AddressBook
 	}
 	
 	public func getSocialProfiles() throws -> [KontactSocialProfile]{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactSocialProfilesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactSocialProfilesKey])
 			}
@@ -468,7 +459,7 @@ import AddressBook
 		}
 	}
 	public func setSocialProfiles(newValue: [KontactSocialProfile]) throws {
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactSocialProfilesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactSocialProfilesKey])
 			}
@@ -490,7 +481,7 @@ import AddressBook
 	}
 	
 	public func getPhoneNumbers() throws -> [KontactPhoneNumber]{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneNumbersKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneNumbersKey])
 			}
@@ -507,7 +498,7 @@ import AddressBook
 		}
 	}
 	public func setPhoneNumbers(newValue: [KontactPhoneNumber]) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPhoneNumbersKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPhoneNumbersKey])
 			}
@@ -528,7 +519,7 @@ import AddressBook
 	}
 	
 	public func getURLAddresses() throws -> [KontactURLAddress]{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactUrlAddressesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactUrlAddressesKey])
 			}
@@ -545,7 +536,7 @@ import AddressBook
 		}
 	}
 	public func setURLAddresses(newValue: [KontactURLAddress]) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactUrlAddressesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactUrlAddressesKey])
 			}
@@ -565,7 +556,7 @@ import AddressBook
 	}
 	
 	public func getPostalAddresses() throws -> [KontactPostalAddress]{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPostalAddressesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPostalAddressesKey])
 			}
@@ -584,7 +575,7 @@ import AddressBook
 		}
 	}
 	public func setPostalAddresses(newValue: [KontactPostalAddress]) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactPostalAddressesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactPostalAddressesKey])
 			}
@@ -611,7 +602,7 @@ import AddressBook
 	}
 	
 	public func getEmailAddresses() throws -> [KontactEmailAddress]{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactEmailAddressesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactEmailAddressesKey])
 			}
@@ -628,7 +619,7 @@ import AddressBook
 		}
 	}
 	public func setEmailAddresses(newValue: [KontactEmailAddress]) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactEmailAddressesKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactEmailAddressesKey])
 			}
@@ -648,7 +639,7 @@ import AddressBook
 	}
 	
 	public func getNote() throws -> String{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactNoteKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNoteKey])
 			}
@@ -658,7 +649,7 @@ import AddressBook
 		}
 	}
 	public func setNote(newValue: String?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactNoteKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNoteKey])
 			}
@@ -671,7 +662,7 @@ import AddressBook
 	}
 	
 	public func getContactRelations() throws -> [KontactRelation]{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactRelationsKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactRelationsKey])
 			}
@@ -690,7 +681,7 @@ import AddressBook
 		}
 	}
 	public func setContactRelations(newValue: [KontactRelation]) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactRelationsKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactRelationsKey])
 			}
@@ -710,7 +701,6 @@ import AddressBook
 	}
 	
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func getInstantMessagingAddresses() throws -> [CNLabeledValue]{
 		if !contact.isKeyAvailable(CNContactInstantMessageAddressesKey){
@@ -719,7 +709,6 @@ import AddressBook
 		return contact.instantMessageAddresses
 	}
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func setInstantMessagingAddresses(newValue: [CNLabeledValue]) throws{
 		if !contact.isKeyAvailable(CNContactRelationsKey){
@@ -731,7 +720,7 @@ import AddressBook
 	}
 	
 	public func getImageData() throws -> NSData?{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactImageDataKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactNoteKey])
 			}
@@ -741,7 +730,7 @@ import AddressBook
 		}
 	}
 	public func setImageData(newValue: NSData?) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactImageDataKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactImageDataKey])
 			}
@@ -754,7 +743,7 @@ import AddressBook
 	}
 	
 	public func isImageDataAvailable() throws -> Bool{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9.0, watchOS 2.0, *){
 			if !contact.isKeyAvailable(CNContactImageDataAvailableKey){
 				try contact = CNContactStore().unifiedContactWithIdentifier(contact.identifier, keysToFetch: [CNContactImageDataAvailableKey])
 			}
@@ -765,7 +754,6 @@ import AddressBook
 	}
 	
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func getThumbnailImageData() throws -> NSData?{
 		if !contact.isKeyAvailable(CNContactThumbnailImageDataKey){

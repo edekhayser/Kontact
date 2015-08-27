@@ -15,7 +15,6 @@ import AddressBook
 	
 	private var ab: AnyObject!
 	@available (iOS, introduced=7.0, deprecated=9.0)
-	@available (OSX, introduced=10.9, deprecated=10.11)
 	@available (watchOS, unavailable)
 	private var addressBook: ABAddressBookRef{
 		get{
@@ -30,7 +29,7 @@ import AddressBook
 	}
 	
 	public class func getAuthorizationStatus() -> KontactAuthorizationStatus{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9, watchOS 2.0, *){
 			return KontactAuthorizationStatus(rawValue: CNContactStore.authorizationStatusForEntityType(.Contacts).rawValue)!
 		} else {
 			return KontactAuthorizationStatus(rawValue: ABAddressBookGetAuthorizationStatus().rawValue as Int)!
@@ -38,7 +37,7 @@ import AddressBook
 	}
 	
 	public func requestAccess(completionHandler: (Bool, NSError?) -> Void){
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9, watchOS 2.0, *){
 			CNContactStore().requestAccessForEntityType(.Contacts, completionHandler: completionHandler)
 		} else {
 			addressBook.requestAccess(completionHandler)
@@ -46,7 +45,7 @@ import AddressBook
 	}
 	
 	public func addEntities(entities: KontactEntity..., toContainerWithIdentifier identifier: String? = nil) throws {
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9, watchOS 2.0, *){
 			let saveRequest = CNSaveRequest()
 			for entity in entities{
 				saveRequest.addContact(entity.contact.mutableCopy() as! CNMutableContact, toContainerWithIdentifier: identifier)
@@ -61,7 +60,7 @@ import AddressBook
 	}
 	
 	public func deleteEntities(entities: KontactEntity...) throws{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9, watchOS 2.0, *){
 			let saveRequest = CNSaveRequest()
 			for entity in entities{
 				saveRequest.deleteContact(entity.contact.mutableCopy() as! CNMutableContact)
@@ -76,14 +75,12 @@ import AddressBook
 	}
 	
 	@available (iOS, introduced=7.0, deprecated=9.0)
-	@available (OSX, introduced=10.9, deprecated=10.11)
 	@available (watchOS, unavailable)
 	public func updateEntities() {
 		ABAddressBookSave(addressBook, nil)
 	}
 	
 	@available (iOS 9, *)
-	@available (OSX 10.11, *)
 	@available (watchOS 2.0, *)
 	public func updateEntities(entities: KontactEntity...) throws{
 		let saveRequest = CNSaveRequest()
@@ -94,7 +91,7 @@ import AddressBook
 	}
 	
 	public func entityWithIdentifier(identifier: String) throws -> KontactEntity{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9, watchOS 2.0, *){
 			return try KontactEntity(contact: CNContactStore().unifiedContactWithIdentifier(identifier, keysToFetch: []))
 		} else {
 			return KontactEntity(record: ABAddressBookGetPersonWithRecordID(addressBook, Int32(identifier)!).takeRetainedValue())
@@ -102,7 +99,7 @@ import AddressBook
 	}
 	
 	public func getAllEntities() throws -> [KontactEntity]{
-		if #available(iOS 9, OSX 10.11, watchOS 2.0, *){
+		if #available(iOS 9, watchOS 2.0, *){
 			var entities = [KontactEntity]()
 			try CNContactStore().enumerateContactsWithFetchRequest(CNContactFetchRequest(keysToFetch: [CNContactIdentifierKey]), usingBlock: { (contact, _) in
 				entities.append(KontactEntity(contact: contact))
